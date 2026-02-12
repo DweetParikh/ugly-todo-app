@@ -17,3 +17,8 @@ function addTodo() {
     document.querySelector("body").appendChild(newDivEl);
     inputEl.value = "";
 }
+
+function deleteTodo(index) {
+    const deleteEl = document.getElementById(index);
+    deleteEl.parentNode.removeChild(deleteEl);
+}
