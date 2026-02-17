@@ -1,14 +1,21 @@
 <html>
     <head>
         <title>ToDo App</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>ToDo List</h1>
-        <div>
-            <input id="todos" placeholder="Type here"></input>
-            <button onclick="addTodo()">Add Todo!!</button>
+        <h1 style="display: flex; justify-content: center;">Todo List</h1>
+        <div id="centerAlign">
+            <div id="inputDiv">
+                <input type="text" placeholder="Type here" autocomplete="off" style="margin: 5px;"></input>
+                <button class="button" onclick="addTodo()">Add Todo!!</button>
+            </div>
+            <div>
+                <button class="button" onclick="deleteFirstTodo()">Delete First Todo</button>
+                <button class="button" onclick="deleteLastTodo()">Delete Last Todo</button>
+            </div>
         </div>
-        <script src="script.js"></script>
-        <!-- <script src="render.js"></script> -->
+        <div id="todolist"></div>
+        <script src="render.js"></script>
     </body>
 </html>
