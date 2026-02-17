@@ -1,0 +1,25 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+#centerAlign {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#inputDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    margin: 5px;
+}
+
+#todolist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
