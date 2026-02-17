@@ -2,6 +2,15 @@ body {
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
 #centerAlign {
     display: flex;
     flex-direction: column;
