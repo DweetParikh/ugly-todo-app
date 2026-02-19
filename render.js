@@ -1,10 +1,18 @@
 let todos = [];
 
 function addTodo() {
+    const input = document.querySelector("input");
+
+    if(input.value === '') {
+        alert("Enter a Todo");
+    }
+
     todos.push({
-        title:document.querySelector("input").value
+        title: input.value
     })
     render ();
+
+    input.value = "";
 }
 
 function deleteFirstTodo() {
@@ -19,7 +27,7 @@ function deleteLastTodo() {
 
 function render() {
     document.querySelector("#todolist").innerHTML = "";
-    for(let i = 1; i < todos.length; i++) {
+    for(let i = 0; i < todos.length; i++) {
         const todo = todos[i];
 
         const divEl = document.createElement("div");
@@ -30,7 +38,7 @@ function render() {
         divEl.style.margin = "5px";
 
         const headingEl = document.createElement("h2");
-        headingEl.textContent = i + '. ' + todo.title;
+        headingEl.textContent = (i + 1)+ '. ' + todo.title;
 
         const todoEl = document.createElement("h2");
         const deleteEl = document.createElement("button");
