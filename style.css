@@ -7,23 +7,34 @@ h1 {
     justify-content: center;
 }
 
-button:hover {
+.button {
+    margin: 5px;
+    padding: 8px 15px;
+    min-width: 150px;   
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.add-button:hover {
     background-color: #45a049;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: red;
+    color: white;
+}
+
+#inputDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #centerAlign {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-#inputDiv {
-    display: flex;
-    justify-content: center;
-}
-
-.button {
-    margin: 5px;
 }
 
 #todolist {
