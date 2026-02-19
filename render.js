@@ -5,13 +5,12 @@ function addTodo() {
 
     if(input.value === '') {
         alert("Enter a Todo");
-    }
-
-    todos.push({
+    } else {
+        todos.push({
         title: input.value
     })
     render ();
-
+    }
     input.value = "";
 }
 
@@ -42,6 +41,7 @@ function render() {
 
         const todoEl = document.createElement("h2");
         const deleteEl = document.createElement("button");
+        deleteEl.classList.add("delete-button");
 
         todoEl.innerHTML = todo.title;
         deleteEl.innerHTML = "Delete";
