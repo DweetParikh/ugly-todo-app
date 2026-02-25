@@ -41,18 +41,31 @@ function render() {
 
         const todoEl = document.createElement("h2");
         const deleteEl = document.createElement("button");
+        const updateEL = document.createElement("button")
         deleteEl.classList.add("delete-button");
+        updateEL.classList.add("update-button");
 
         todoEl.innerHTML = todo.title;
         deleteEl.innerHTML = "Delete";
+        updateEL.innerHTML = "Update";
 
         deleteEl.onclick = function() {
             todos.splice(i, 1);
             render ();
         };
 
+        updateEL.onclick = function() {
+            const newTodo = prompt("Update your todo:", todos[i].title);
+
+            if(newTodo !== null && newTodo.trim() !== "") {
+                todos[i].title = newTodo;
+                render ();
+            }
+        }
+
         divEl.appendChild(headingEl);
         divEl.appendChild(deleteEl);
+        divEl.appendChild(updateEL);
 
         document.querySelector("#todolist").appendChild(divEl);
     }
