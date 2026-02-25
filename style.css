@@ -8,6 +8,9 @@ body {
 h1 {
     display: flex;
     justify-content: center;
+    color: rgb(0, 0, 0);
+    margin-top: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
 .button {
